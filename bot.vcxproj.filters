@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SC2 Headers">
+      <UniqueIdentifier>{d00b7cd7-5862-4730-865d-5e5906229896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SC2 Sources">
+      <UniqueIdentifier>{2abf7f7e-2eab-487c-9d1b-1c43d526c97a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_action.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_agent.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_args.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_client.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_common.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_connection.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_coordinator.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_data.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_game_settings.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_map_info.cpp">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_proto_interface.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_proto_to_pods.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_replay_observer.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_score.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_typeenums.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2api\sc2_unit.cc">
+      <Filter>SC2 Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_action.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_agent.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_api.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_args.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_client.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_common.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_connection.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_control_interfaces.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_coordinator.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_data.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_game_settings.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_gametypes.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_interfaces.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_map_info.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_proto_interface.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_proto_to_pods.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_replay_observer.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_score.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_typeenums.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_types.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_unit.h">
+      <Filter>SC2 Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
