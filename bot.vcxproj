@@ -128,7 +128,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BuildOrder.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="s2client-api\examples\annoying_helper.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\bot_micro.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\bot_mp.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\bot_simple.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\common\bot_examples.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\echo_actions.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\feature_layers.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\intermediate_bot.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\replay.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\tutorial.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="s2client-api\src\sc2api\sc2_action.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -177,29 +208,81 @@
     <ClCompile Include="s2client-api\src\sc2api\sc2_unit.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2renderer\sc2_renderer.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="s2client-api\include\sc2api\sc2_action.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_agent.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_api.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_args.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_client.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_common.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_connection.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_control_interfaces.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_coordinator.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_data.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_gametypes.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_game_settings.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_interfaces.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_map_info.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_proto_interface.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_proto_to_pods.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_replay_observer.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_score.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_typeenums.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_types.h" />
-    <ClInclude Include="s2client-api\include\sc2api\sc2_unit.h" />
+    <ClInclude Include="BuildOrder.h" />
+    <ClInclude Include="s2client-api\examples\common\bot_examples.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_action.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_agent.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_api.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_args.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_client.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_common.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_connection.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_control_interfaces.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_coordinator.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_data.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_gametypes.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_game_settings.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_interfaces.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_map_info.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_proto_interface.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_proto_to_pods.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_replay_observer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_score.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_typeenums.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_types.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2api\sc2_unit.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2renderer\sc2_renderer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

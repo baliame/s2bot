@@ -19,6 +19,12 @@
     <Filter Include="SC2 Sources">
       <UniqueIdentifier>{2abf7f7e-2eab-487c-9d1b-1c43d526c97a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SC2 Examples">
+      <UniqueIdentifier>{6b50fc32-3900-445a-aeab-ca7aede81455}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SC2 Renderer">
+      <UniqueIdentifier>{a0e1b0bf-4443-4a69-8492-d6bfefbd73ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,6 +77,42 @@
     </ClCompile>
     <ClCompile Include="s2client-api\src\sc2api\sc2_unit.cc">
       <Filter>SC2 Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\annoying_helper.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\bot_micro.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\bot_mp.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\bot_simple.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\echo_actions.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\feature_layers.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\intermediate_bot.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\replay.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\tutorial.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\examples\common\bot_examples.cc">
+      <Filter>SC2 Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="s2client-api\src\sc2renderer\sc2_renderer.cc">
+      <Filter>SC2 Renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +178,15 @@
     </ClInclude>
     <ClInclude Include="s2client-api\include\sc2api\sc2_unit.h">
       <Filter>SC2 Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildOrder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\examples\common\bot_examples.h">
+      <Filter>SC2 Examples</Filter>
+    </ClInclude>
+    <ClInclude Include="s2client-api\include\sc2renderer\sc2_renderer.h">
+      <Filter>SC2 Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
