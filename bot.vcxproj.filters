@@ -114,6 +114,9 @@
     <ClCompile Include="s2client-api\src\sc2renderer\sc2_renderer.cc">
       <Filter>SC2 Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="MapFeatures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="s2client-api\include\sc2api\sc2_action.h">
@@ -187,6 +190,9 @@
     </ClInclude>
     <ClInclude Include="s2client-api\include\sc2renderer\sc2_renderer.h">
       <Filter>SC2 Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MapFeatures.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

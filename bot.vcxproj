@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="BuildOrder.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapFeatures.cpp" />
     <ClCompile Include="s2client-api\examples\annoying_helper.cc">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -214,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BuildOrder.h" />
+    <ClInclude Include="MapFeatures.h" />
     <ClInclude Include="s2client-api\examples\common\bot_examples.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>

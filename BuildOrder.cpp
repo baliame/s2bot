@@ -13,6 +13,7 @@ void BuildOrder::PushDirective(const BuildDirective* d) {
 }
 
 void CommonBaseBuildOrder::CreateBuildDirectives() {
+	build_depots_if_required = false;
 	PushDirective(SCVBuildDirective);
 	PushDirective(SCVBuildDirective);
 	PushDirective(new BuildDirective(ABILITY_ID::BUILD_SUPPLYDEPOT, BuildStructureDirectiveTarget::BSDT_RampBlock));

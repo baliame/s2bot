@@ -5,7 +5,7 @@
 
 using namespace sc2;
 
-// #define FEATURE_LAYER_TEST
+#define FEATURE_LAYER_TEST
 
 #ifdef FEATURE_LAYER_TEST
 #include <sc2renderer/sc2_renderer.h>
@@ -112,7 +112,7 @@ public:
 		Control()->GetObservation();
 		// DumpImages();
 		const ObservationInterface* obs = Observation();
-		FloodPartitionZones(obs);
+		//FloodPartitionZones(obs);
 
 	}
 
