@@ -5,6 +5,8 @@
 
 using namespace sc2;
 
+#include "MapFeatures.h"
+
 #define FEATURE_LAYER_TEST
 
 #ifdef FEATURE_LAYER_TEST
@@ -84,6 +86,10 @@ void ImageDataToPGM(std::ofstream& dest, const ImageData& source) {
 	}
 }
 
+#ifdef FEATURE_LAYER_TEST
+ImageData zi;
+#endif
+
 class Bot : public Agent {
 	void DumpImages() {
 		const ObservationInterface* obs = Observation();
@@ -106,13 +112,14 @@ class Bot : public Agent {
 public:
     virtual void OnGameStart() final {
 		
-#ifdef FEATURE_LAYER_TEST
-		renderer::Initialize("Feature layers", 50, 50, kDrawSize, 2 * kDrawSize);
-#endif
 		Control()->GetObservation();
-		// DumpImages();
 		const ObservationInterface* obs = Observation();
-		//FloodPartitionZones(obs);
+		FloodPartitionZones(obs);
+#ifdef FEATURE_LAYER_TEST
+		renderer::Initialize("Feature layers", 50, 50, kDrawSize, kDrawSize);
+		zi = zone_storage->GenerateZonesImage();
+#endif
+		// DumpImages();
 
 	}
 
@@ -124,8 +131,7 @@ public:
 		const ObservationInterface* obs = Observation();
 		const SC2APIProtocol::Observation* observation = Observation()->GetRawObservation();
 
-		DrawFeatureLayerHeightMap8BPPID(obs->GetGameInfo().terrain_height, 0, 0);
-		DrawFeatureLayerHeightMap8BPPID(obs->GetGameInfo().pathing_grid, 0, kDrawSize);
+		DrawFeatureLayerHeightMap8BPPID(zi, 0, 0);
 
 		renderer::Render();
 #endif

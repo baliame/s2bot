@@ -1,7 +1,9 @@
 #pragma once
 #include <sc2api/sc2_api.h>
 #include <queue>
+#include <set>
 #include <vector>
+#include <random>
 #include <iostream>
 
 #define XRANGE(a) (int x = 0; x < a; x++)
@@ -11,16 +13,22 @@ struct Zone {
 	Zone();
 
 	int zone_id;
-	unsigned char zone_height;
+	uint8_t zone_height;
 	bool is_home_zone;
 	bool is_ramp_zone;
 	unsigned tiles;
-	std::vector<Zone*> adjacent_zones;
+	std::set<Zone*> adjacent_zones;
 	static int next_zone_id;
+	std::vector<sc2::Point2DI> reverse_lookup;
+	uint8_t zone_color;
+
+	bool merged;
 };
 
 struct ZoneStorage {
-	ZoneStorage(int width, int height) : points(new Zone*[width*height]), w(width), h(height) {}
+	ZoneStorage(int width, int height) : points(new Zone*[width*height]), w(width), h(height) {
+		memset(points, 0, sizeof(Zone*)*w*h);
+	}
 	~ZoneStorage() {
 		if (points) {
 			delete[] points;
@@ -33,21 +41,40 @@ struct ZoneStorage {
 			std::cerr << "Map: " << w << "x" << h << "; requested coords: (" << x << ", " << y << ")" << std::endl;
 			assert(false);  /* CRASH() */
 		}
-		return points[h * y + x];
+		return points[h * x + y];
 	}
 
 	void set(int x, int y, Zone* z) {
-		points[h * y + x] = z;
+		points[h * x + y] = z;
 	}
 
+	void add_zone(Zone* z) {
+		all_zones.insert(z);
+	}
+
+	void remove_zone(Zone* z) {
+		all_zones.erase(all_zones.find(z));
+	}
+
+	auto begin() {
+		return all_zones.begin();
+	}
+
+	auto end() {
+		return all_zones.end();
+	}
+
+	sc2::ImageData GenerateZonesImage();
+
 private:
+	std::set<Zone*> all_zones;
 	Zone** points;
 	int w, h;
 };
 
-extern std::vector<Zone*> all_zones;
 extern ZoneStorage* zone_storage;
-#define qabs(x) (x < 0 ? -x : x)
+#define qabs(x) ((x) < 0 ? -(x) : (x))
+#define qmax(x, y) ((x) > (y) ? (x) : (y))
 
 struct PartitionPoint {
 	int x;
@@ -61,13 +88,14 @@ struct PartitionPoint {
 
 struct PartitionData {
 	int width, height;
-	unsigned char** closed;
+	uint8_t** closed;
 	std::queue<PartitionPoint> open;
 	
 	PartitionData(int width, int height) : width(width), height(height) {
-		closed = new unsigned char*[width];
+		closed = new uint8_t*[width];
 		for XRANGE(width) {
-			closed[x] = new unsigned char[height];
+			closed[x] = new uint8_t[height];
+			memset(closed[x], 0, height * sizeof(uint8_t));
 		}
 	}
 
@@ -82,4 +110,14 @@ struct PartitionData {
 	}
 };
 
-void FloodPartitionZones(sc2::ObservationInterface* obs);
+void FloodPartitionZones(const sc2::ObservationInterface* obs);
+
+struct Point2DIL : sc2::Point2DI {
+	Point2DIL* next;
+
+	Point2DIL(int x, int y, Point2DIL* next) : Point2DI(x, y), next(next) {}
+	Point2DIL* Flip(Point2DIL* prev = nullptr);
+	void Collapse();
+};
+
+Point2DIL* AStar(const sc2::Point2DI& from, const sc2::Point2DI& to, sc2::ObservationInterface* obs);

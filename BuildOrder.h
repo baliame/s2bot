@@ -62,7 +62,7 @@ struct BuildDirective {
 		type(type), build_ability(build_ability), enum_parameter(enum_parameter), id_parameter(id_parameter), point_parameter(point_parameter), wait_finish_id(wait_finish_id) {};
 
 	BuildDirective(sc2::ABILITY_ID build_ability, BuildStructureDirectiveTarget spm, int id_parameter = -1, const sc2::Point2D& point_parameter = sc2::Point2D(0, 0), int wait_finish_id = -1) :
-		type(BuildDirectiveType::BDT_BuildStructure), build_ability(build_ability), enum_parameter(EnumParameter(spm)), id_parameter(id_parameter), point_parameter(point_parameter), wait_finish_id(wait_finish_id), repeat(DR_NoRepeat), {};
+		type(BuildDirectiveType::BDT_BuildStructure), build_ability(build_ability), enum_parameter(EnumParameter(spm)), id_parameter(id_parameter), point_parameter(point_parameter), wait_finish_id(wait_finish_id), repeat(DR_NoRepeat), async_repeat(false) {};
 
 	BuildDirective(sc2::ABILITY_ID build_ability, TrainedUnitSquadAssignment upm, int id_parameter = -1, const sc2::Point2D& point_parameter = sc2::Point2D(0, 0), int wait_finish_id = -1,
 		DirectiveRepeatability repeat = DR_NoRepeat, bool async_repeat = false) :
